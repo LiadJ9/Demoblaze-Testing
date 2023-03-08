@@ -5,7 +5,7 @@ import utilities.blaze_driver as bu
 
 
 class HeaderLocators(object):
-    pass
+    home_button = (bu.By.XPATH, '/html/body/nav/div[1]/ul/li[1]/a')
 
 
 class MainPageLocators(object):
