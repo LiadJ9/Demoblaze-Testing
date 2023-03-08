@@ -10,8 +10,8 @@ class TestBlazeMain(bu.unittest.TestCase):
         self.my_driver.maximize_window()
 
     def test_Home_button(self):
-        bu.WDW(self.my_driver, 10).until(bu.EC.visibility_of_element_located(bl.HeaderLocators.home_button))
-        home = self.my_driver.find_element(bl.HeaderLocators.home_button)
+        bu.WDW(self.my_driver, 10).until(bu.EC.visibility_of_element_located(bl.HL.home_button))
+        home = self.my_driver.find_element(bl.HL.home_button)
         home.click()
 
 
