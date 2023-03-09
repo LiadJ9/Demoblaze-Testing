@@ -24,3 +24,4 @@ def get_chrome_driver():
 def get_firefox_driver():
     my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
     return my_driver
+
