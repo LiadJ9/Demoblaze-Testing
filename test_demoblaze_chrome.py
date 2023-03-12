@@ -2,6 +2,7 @@ import packages.utilities.blaze_driver as bu
 import packages.pages.blaze_pages as bp
 import packages.constructors.blaze_locators as bl
 import packages.constructors.blaze_locators1 as bl1
+import packages.pages.blaze_pages1 as bp1
 max_word_count = '1sihA8ttDrEsi02sZMz3uYrvqxhZG6mIlQ6QWRnFa6Wdf43KzP7IKuSC0609x2rXgJGBbDI9fvaehc4Rg808bStvl4uW4xEu7ptEWdeL8H0oSEh6wdQ04IKEcqhL33s1AccVY3PBKr6lfbcPf1k38LR186fIN3B6l5LhYLzgXkaVm7owjyJljIz7xCU3NEzvzqhmvQlhFqunh5AWfkp3kSqvCXkGRhTULKkd49zyi2rBHrDtCkq5QOJoJgWM217PxQaG'
 msg = 'This is the message I want to send to your company, I really dislike your site and I think you should do a better job at ensuring quality'
 
