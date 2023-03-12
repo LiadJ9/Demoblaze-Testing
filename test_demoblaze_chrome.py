@@ -68,6 +68,8 @@ class TestBlazeHome(bu.unittest.TestCase):
         bu.WDW(self.my_driver, 5).until(bu.EC.visibility_of_element_located((*bl1.HL.TI,)))
         assert self.my_driver.find_element(*bl1.HL.TI,)
 
+    
+
     def tearDown(self):
         bu.sleep(1)
         self.my_driver.quit()
