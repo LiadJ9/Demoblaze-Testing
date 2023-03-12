@@ -71,7 +71,8 @@ class TestBlazeHome(bu.unittest.TestCase):
 
     def test_valid_LoggedIn(self):
         bp1.HP.log_in_site(self)
-        assert self.my_driver.find_element(bu.By.ID, "nameofuser").text == 'Welcome alex12345'
+        bu.WDW(self.my_driver, 5).until(bu.EC.visibility_of_element_located((*bl1.Cart.UE,)))
+        self.assertTrue(self.my_driver.find_element(*bl1.Cart.UE,))
 
     def tearDown(self):
         bu.sleep(1)

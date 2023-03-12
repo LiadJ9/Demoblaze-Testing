@@ -20,6 +20,7 @@ import packages.utilities.blaze_driver as bu
 # UF = Username Field
 # PF = Password Field
 # LB = Login Button
+# UE = User Exists
 
 # # # # # LOCATORS - We use these to tidy up our code and save time searching for elements # # # # # #
 
@@ -49,3 +50,4 @@ class Cart(object):
     UF = (bu.By.ID, 'loginusername')
     PF = (bu.By.ID, 'loginpassword')
     LB = (bu.By.XPATH, '//*[@id="logInModal"]/div/div/div[3]/button[2]')
+    UE = (bu.By.ID, "nameofuser")
