@@ -6,6 +6,9 @@ from packages.utilities.blaze_driver import By
 
 # CL - CONTACT LOCATORS
 
+# AUL - ABOUT US LOCATORS
+
+# MPL - MAIN PAGE LOCATORS
 
 
 class HL(object):
@@ -14,8 +17,10 @@ class HL(object):
     Contact = (By.XPATH, '/html/body/nav/div[1]/ul/li[2]/a')
     About_us = (By.XPATH, '/html/body/nav/div[1]/ul/li[3]/a')
     Cart = (By.ID, 'cartur')
-    Login = (By.XPATH, '/html/body/nav/div[1]/ul/li[5]/a')
-    Signup = (By.XPATH, '/html/body/nav/div[1]/ul/li[6]/a')
+    Login = (By.XPATH, '//*[@id="login2"]')
+    Signup = (By.XPATH, '//*[@id="signin2"]')
+    Username = (By.ID, 'nameofuser')
+    logout = (By.XPATH, '//*[@id="logout2"]')
 
 
 class CL(object):
@@ -26,15 +31,17 @@ class CL(object):
     Send_message = (By.XPATH, '/html/body/div[1]/div/div/div[3]/button[2]')
 
 
-class AboutUsLocators(object):
+class AUL(object):
     Close_button = (By.XPATH, '/html/body/div[4]/div/div/div[3]/button')
     Big_Play_button = (By.CLASS_NAME, 'vjs-big-play-button')
     Sound_OnOff = (By.XPATH, '/html/body/div[4]/div/div/div[2]/form/div/div/div[4]/div[1]/button')
+    Sound_slider = (By.XPATH, '/html/body/div[4]/div/div/div[2]/form/div/div/div[4]/div[1]/div/div')
     Play_button = (By.CLASS_NAME, 'vjs-play-control')
     Fullscreen = (By.CLASS_NAME, 'vjs-fullscreen-control')
+    total_volume = (By.CLASS_NAME, 'vjs-volume-level')
 
 
-class MainPageLocators(object):
+class MPL(object):
     Carousel_previous = (By.CLASS_NAME, 'carousel-control-prev')
     Carousel_next = (By.CLASS_NAME, 'carousel-control-next')
     Carousel_slide1 = (By.XPATH, '/html/body/nav/div[2]/div/ol/li[1]')
@@ -45,7 +52,7 @@ class MainPageLocators(object):
     Monitor_cat = (By.CSS_SELECTOR, 'a.list-group-item:nth-child(4)')
     Previous = (By.ID, 'prev2')
     Next = (By.ID, 'next2')
-
+    Add_to_cart = (By.XPATH, '/html/body/div[5]/div/div[2]/div[2]/div/a')
 
 class LogInLocators(object):
     Login_username = (By.ID, 'loginusername')
@@ -69,3 +76,16 @@ class CartPageLocators(object):
     Credit_Card = (By.ID, 'card')
     Month = (By.ID, 'month')
     Year = (By.ID, 'year')
+    item_exists = (By.ID, 'tbodyid')
+    delete_first_item = (By.XPATH, '/html/body/div[6]/div/div[1]/div/table/tbody/tr[1]/td[4]/a')
+    order_page_order = (By.XPATH, '/html/body/div[3]/div/div/div[3]/button[2]')
+    order_confirmed = (By.CSS_SELECTOR, '.sweet-alert')
+    confirmation_page_info = (By.XPATH, '/html/body/div[10]/p')
+    confirm_page_exit = (By.XPATH, '/html/body/div[10]/div[7]/div/button')
+    find_all_items = (By.XPATH, '/html/body/div[6]/div/div[1]/div/table/tbody/tr[@class="success"]')
+    cancel_order = (By.XPATH, '/html/body/div[3]/div/div/div[3]/button[1]')
+
+
+
+
+

@@ -11,7 +11,7 @@ msg = 'This is the message I want to send to your company, I really dislike your
 class TestBlazeHome(bu.unittest.TestCase):
 
     def setUp(self):
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
 
@@ -25,10 +25,10 @@ class TestBlazeHome(bu.unittest.TestCase):
         bu.WDW(self.my_driver, 10).until(bu.EC.visibility_of_element_located((*bl1.HL.hb,)))
         home = self.my_driver.find_element(*bl1.HL.hb,)
         home.click()
-        change_picture = self.my_driver.find_element(bu.By.XPATH, bl1.MPL.BCP)
+        change_picture = self.my_driver.find_element(*bl1.MPL.BCP)
         change_picture.click()
-        bu.WDW(self.my_driver, 5).until(bu.EC.visibility_of_element_located((bu.By.XPATH, bl1.MPL.second_pic)))
-        assert self.my_driver.find_element(bu.By.XPATH, bl1.MPL.second_pic)
+        bu.WDW(self.my_driver, 5).until(bu.EC.visibility_of_element_located((*bl1.MPL.second_pic,)))
+        assert self.my_driver.find_element(*bl1.MPL.second_pic)
 
     def test_button_next(self):
         bu.WDW(self.my_driver, 5).until(bu.EC.visibility_of_element_located((*bl1.HL.hb,)))
@@ -76,7 +76,7 @@ class TestBlazeHome(bu.unittest.TestCase):
 class TestBlazeHeaders(bu.unittest.TestCase):
 
     def setUp(self):
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
 
@@ -117,7 +117,7 @@ class TestBlazeHeaders(bu.unittest.TestCase):
 
 class TestBlazeContact(bu.unittest.TestCase):
     def setUp(self):
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
 
@@ -235,7 +235,7 @@ class TestBlazeContact(bu.unittest.TestCase):
 
 class TestBlazeAboutUs(bu.unittest.TestCase):
     def setUp(self):
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
 
@@ -305,7 +305,7 @@ class TestBlazeAboutUs(bu.unittest.TestCase):
 class TestBlazeLogIn(bu.unittest.TestCase):
 
     def setUp(self):
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
 
@@ -395,7 +395,7 @@ class TestBlazeLogIn(bu.unittest.TestCase):
         login.login_pass(temp_password)
         login.click_login_submit()
         self.my_driver.close()
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
         self.assertTrue(bu.WDW(self.my_driver, 10).until(bu.EC.invisibility_of_element(bl.HL.Username)))
@@ -408,7 +408,7 @@ class TestBlazeLogIn(bu.unittest.TestCase):
 class TestBlazeSignUp(bu.unittest.TestCase):
 
     def setUp(self):
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
 
@@ -426,7 +426,6 @@ class TestBlazeSignUp(bu.unittest.TestCase):
         else:
             vals = False
         self.assertTrue(vals)
-        alert.accept()
         header.click_logout_button()
 
     def test_sign_up_existing_usr_2_2(self):
@@ -556,7 +555,7 @@ class TestBlazeSignUp(bu.unittest.TestCase):
 class TestBlazeCart(bu.unittest.TestCase):
 
     def setUp(self):
-        self.my_driver = bu.get_chrome_driver()
+        self.my_driver = bu.get_edge_driver()
         self.my_driver.get('https://www.demoblaze.com/index.html')
         self.my_driver.maximize_window()
 

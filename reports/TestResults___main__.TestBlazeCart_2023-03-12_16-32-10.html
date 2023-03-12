@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-03-12 16:32:10</p>
+                <p class='attribute'><strong>Duration: </strong>106.20 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 15, Pass: 2, Error: 13</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.TestBlazeCart</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_add_4_different_items_to_cart_3_8</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_add_product_to_cart_3_1</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_cart_after_order_is_empty_3_15</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:38 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D01F:E554:CE7411C:D1A08CD:640DE2FE'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:38 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D01F:E554:CE7411C:D1A08CD:640DE2FE'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_confirmation_details_same_as_given_3_5</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:42 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D023:6A07:829B993:84D65C1:640DE302'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:42 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D023:6A07:829B993:84D65C1:640DE302'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_delete_product_from_cart_3_2</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:46 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632951', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D027:6A07:829C415:84D705E:640DE305'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:46 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632951', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D027:6A07:829C415:84D705E:640DE305'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_empty_cart_purchase_3_9</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:49 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D02B:FD7D:138A5AA3:13DAEDA2:640DE309'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:49 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D02B:FD7D:138A5AA3:13DAEDA2:640DE309'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_invalid_order_with_login_3_14</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:53 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D033:E554:CE76B5E:D1A33D3:640DE30D'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:53 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D033:E554:CE76B5E:D1A33D3:640DE30D'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_log_out_and_log_in_after_adding_item_to_cart_3_11</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:57 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D038:5C3E:1CA18306:1D09D63F:640DE311'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:34:57 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D038:5C3E:1CA18306:1D09D63F:640DE311'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_minimum_details_3_6</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:01 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D03D:0F77:CA62BC0:CD828F6:640DE315'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:01 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D03D:0F77:CA62BC0:CD828F6:640DE315'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_no_login_invalid_details_3_4</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:05 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D041:0F77:CA639F4:CD8374C:640DE319'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:05 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D041:0F77:CA639F4:CD8374C:640DE319'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_no_login_valid_details_3_3</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:09 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D045:85CC:966586A:98DA37C:640DE31D'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:09 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D045:85CC:966586A:98DA37C:640DE31D'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_order_confirmation_name_is_user_name_3_12</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:13 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D049:0F86:6461FB6:663C3DF:640DE321'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:13 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D049:0F86:6461FB6:663C3DF:640DE321'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_random_item_added_to_cart_no_login_3_7</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:17 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632951', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D04D:936E:1934F0D4:19972D94:640DE325'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:17 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632951', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D04D:936E:1934F0D4:19972D94:640DE325'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_remove_item_from_list_3_10</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:20 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D051:E4F4:1358A3D3:13A5BC1A:640DE328'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:20 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D051:E4F4:1358A3D3:13A5BC1A:640DE328'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_valid_order_with_login_3_13</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:24 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D055:0F86:6463FD0:663E484:640DE32C'}
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\test_demoblaze_firefox.py", line 431, in setUp
+    self.my_driver = bu.get_firefox_driver()
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Demoblaze-Testing\packages\utilities\blaze_driver.py", line 34, in get_firefox_driver
+    my_driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\firefox.py", line 37, in install
+    driver_path = self._get_driver_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\manager.py", line 30, in _get_driver_path
+    file = self._download_manager.download_file(driver.get_url())
+                                                ^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\drivers\firefox.py", line 40, in get_url
+    resp = self._http_client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 33, in get
+    self.validate_response(resp)
+  File "C:\Users\liad\Documents\GitHub\Python interpreter\Lib\site-packages\webdriver_manager\core\http.py", line 20, in validate_response
+    raise ValueError(
+ValueError: response body:
+{"message":"API rate limit exceeded for 31.154.222.222. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+
+request url:
+https://api.github.com/repos/mozilla/geckodriver/releases/tags/110.0
+response headers:
+{'Date': 'Sun, 12 Mar 2023 14:35:24 GMT', 'Server': 'Varnish', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains; preload', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'deny', 'X-XSS-Protection': '1; mode=block', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'", 'Access-Control-Allow-Origin': '*', 'Access-Control-Expose-Headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset', 'Content-Type': 'application/json; charset=utf-8', 'Referrer-Policy': 'origin-when-cross-origin, strict-origin-when-cross-origin', 'X-GitHub-Media-Type': 'github.v3; format=json', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1678632950', 'X-RateLimit-Resource': 'core', 'X-RateLimit-Used': '60', 'Content-Length': '280', 'X-GitHub-Request-Id': 'D055:0F86:6463FD0:663E484:640DE32C'}
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 15, Pass: 2, Error: 13 -- Duration: 106.20 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
