@@ -69,13 +69,9 @@ class TestBlazeHome(bu.unittest.TestCase):
         bu.WDW(self.my_driver, 5).until(bu.EC.visibility_of_element_located((*bl1.HL.TI,)))
         assert self.my_driver.find_element(*bl1.HL.TI,)
 
-    def test_add_item_to_cart_while_LoggedIn(self):
+    def test_valid_LoggedIn(self):
         bp1.HP.log_in_site(self)
-        bu.WDW(self.my_driver, 5).until(bu.EC.visibility_of_element_located((*bl1.Cart.RP,)))
-        RP = self.my_driver.find_element(*bl1.Cart.RP,)
-        RP.click()
-
-    
+        assert self.my_driver.find_element(bu.By.ID, "nameofuser").text == 'Welcome alex12345'
 
     def tearDown(self):
         bu.sleep(1)
