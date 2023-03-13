@@ -10,10 +10,15 @@ class BasePage(object):
 
 
 class GeneralPage(BasePage):
+
+    # Finds built in browser alert - used for gathering alert text and dismissing alerts
+
     def find_alert(self):
         bu.WDW(self.my_driver, 10).until(bu.EC.alert_is_present())
         alert = self.my_driver.switch_to.alert
         return alert
+
+    # Creates a new account
 
     def create_existing_account(self):
         bu.WDW(self.my_driver, 10).until(bu.EC.visibility_of_element_located(bl.HL.Signup))
@@ -32,6 +37,8 @@ class GeneralPage(BasePage):
         bu.sleep(2)
         return temp_username, temp_password
 
+    # Logs into existing account created by the function above - not required but if the account doesn't exist the function will fail
+
     def log_in_existing_account(self, username, password):
         bu.WDW(self.my_driver, 10).until(bu.EC.visibility_of_element_located(bl.HL.Login))
         header = HeaderPage(self.my_driver)
@@ -42,6 +49,7 @@ class GeneralPage(BasePage):
         login.click_login_submit()
         bu.sleep(1)
 
+    # Generates random  8 letter/number string for user in passwords/names
     @staticmethod
     def randomusrpswd():
         number = bu.string.digits
@@ -50,11 +58,15 @@ class GeneralPage(BasePage):
         numero = (''.join(random.choice(number) for _ in range(4)))
         return f'{letters}{numero}'
 
+    # Generates random item link between 1 and 9 to ensure test reliability
+
     @staticmethod
     def random_item():
         url = ('https://www.demoblaze.com/prod.html?idp_='+(str(random.randint(1, 9))))
         return f'{url}'
 
+
+# HEADER PAGE FUNCTIONS
 
 class HeaderPage(BasePage):
     def click_home_button(self):
@@ -183,16 +195,6 @@ class ContactPage(BasePage):
         bu.WDW(self.my_driver, 10).until(bu.EC.visibility_of_element_located((*bl.CL.Cancel_button,)))
         sendcncl = self.my_driver.find_element(*bl.CL.Cancel_button)
         sendcncl.click()
-
-    # def drag_down_msg(self):
-    #     bu.WDW(self.my_driver, 10).until(bu.EC.visibility_of_element_located((*bl.CL.Message_box,)))
-    #     msg_slot = self.my_driver.find_element(*bl.CL.Message_box)
-    #     action = bu.AC.ActionChains(self.my_driver)
-    #     action.move_to_element(msg_slot).perform()
-    #     action.click_and_hold()
-    #     action.move_by_offset(0, 300).perform()
-    #     action.release().perform()
-    #     assert msg_slot.get_attribute('style') == "height: 360px;"
 
 
 class AboutPage(BasePage):
